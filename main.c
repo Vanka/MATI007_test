@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define LINELENGTH 33
 #define INPUTBUF 3
 
-int safeinput(max, min)
+int safeinput()
 {
 
     char buffer[INPUTBUF];
@@ -106,12 +107,12 @@ int main()
                 break;
             case 6:
                 printf("You've got FROWNED!!!\n");
-                getch();
+                getchar();
                 printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
                 break;
             case 8:
                 printf("To tell the truth, cake makes me much stronger...");
-                getch();
+                getchar();
                 printf("but cake is a lie!\n");
                 break;
 
@@ -192,7 +193,7 @@ int main()
             \n\
         \n");
         printf("\n\nEnter @ to exit or something else to try again lol\n");
-        c=getch();
+        c=getchar();
     }
 
     return 0;

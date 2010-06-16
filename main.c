@@ -20,7 +20,7 @@ int main()
         printf("3)By nickname\n");
         printf("4)I'm not shy!!!\n");
         printf("5)Tut bil Gero\n");
-        printf("6)Print something cool =)\n");
+        printf("6)Print to see something cool =)\n");
 
         do{
             c=getch();
@@ -59,10 +59,12 @@ int main()
                 nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
 
                 break;
+            case '5':
+                printf("This means, that Gero now understands Git!!!\n")
             case '6':
-                printf("You've got FROWNED!1!\n");
+                printf("You've got FROWNED!!!\n");
                 getch();
-                printf("Seriously, You've got FROWNED!1!\n");
+                printf("Seriously, You've got FROWNED!1!!!1!!!1111\n");
                 break;
 
 

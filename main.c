@@ -20,13 +20,13 @@ int main()
         printf("3)By nickname\n");
         printf("4)I'm not shy!!!\n");
         printf("5)Tut bil Gero\n");
-        printf("6)Print to see something cool =)\n");
+        printf("6)Choose me to see something cool =)\n");
 
         do{
             c=getch();
         }while(c<'1'||c>'6');
 
-        printf("Remember:you can't enter more then %d symbols per field!\n", LINELENGTH-1);
+        printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);
 
         switch(c){
             case '1':
@@ -60,15 +60,18 @@ int main()
 
                 break;
             case '5':
-                printf("This means, that Gero now understands Git!!!\n")
+                printf("This means, that Gero now understands Git!!!\n");
+                break;
             case '6':
                 printf("You've got FROWNED!!!\n");
                 getch();
-                printf("Seriously, You've got FROWNED!1!!!1!!!1111\n");
+                printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
                 break;
 
 
         }
+
+        printf("-------------------\n");
 
         //printf("name=%d\nsurname=%d\nnickname=%d\n", strlen(namebuffer), strlen(surnamebuffer), strlen(nicknamebuffer));
 /*
@@ -90,7 +93,7 @@ int main()
             printf("Oh, %s is not a shy person - now we know that %s's surname is %s and %s's nickname is %s! Thank you very much!!!\n", namebuffer, namebuffer, surnamebuffer, namebuffer, nicknamebuffer);
         }
 
-        printf("Enter @ to exit or something else to try again lol\n");
+        printf("\n\nEnter @ to exit or something else to try again lol\n");
         c=getch();
     }
     return 0;

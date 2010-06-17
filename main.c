@@ -26,7 +26,7 @@ int main()
         printf("9)Aga vot eti reb9ta \n")
         do{
             c=getch();
-        }while(c<'1'||c>'6');
+        }while(c<'1'||c>'8');
 
         printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);
 
@@ -68,6 +68,11 @@ int main()
                 printf("You've got FROWNED!!!\n");
                 getch();
                 printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
+                break;
+            case '8':
+                printf("To tell the truth, cake makes me much more strong...");
+                getch();
+                printf("but cake is a lie!\n");
                 break;
 
 

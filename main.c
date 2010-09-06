@@ -23,7 +23,8 @@ int main()
         printf("6)Choose me to see something cool =)\n");
         printf("7)Tut bil Gero opiat\n");
         printf("8)Sandwich makes me so strong!\n");
-        printf("9)Aga vot eti reb9ta \n")
+        printf("9)Aga vot eti reb9ta \n");
+        printf("10)O________________o... \n");
         do{
             c=getch();
         }while(c<'1'||c>'8');

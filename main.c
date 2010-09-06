@@ -75,7 +75,9 @@ int main()
                 getch();
                 printf("but cake is a lie!\n");
                 break;
-
+            case '9':
+                printf("Какие нах ребята?!\n");
+                break;
 
         }
 

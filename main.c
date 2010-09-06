@@ -26,7 +26,7 @@ int main()
         printf("i)Aga vot eti reb9ta \n");
         printf("j)O________________o... \n");
         do{
-            c=getchar();
+            c=getch();
         }while(c<'1'||c>'10');
 
         printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);

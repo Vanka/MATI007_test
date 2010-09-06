@@ -21,6 +21,7 @@ int main()
         printf("4)I'm not shy!!!\n");
         printf("5)Tut bil Gero\n");
         printf("6)Choose me to see something cool =)\n");
+        printf("7)Tut bil Gero opiat\n");
 
         do{
             c=getch();

@@ -15,39 +15,39 @@ int main()
     while(c!='@'){
 
         printf("How do you want to introduce yourself?:\n");
-        printf("1)By name\n");
-        printf("2)By surname\n");
-        printf("3)By nickname\n");
-        printf("4)I'm not shy!!!\n");
-        printf("5)Tut bil Gero\n");
-        printf("6)Choose me to see something cool =)\n");
-        printf("7)Tut bil Gero opiat\n");
-        printf("8)Sandwich makes me so strong!\n");
-        printf("9)Aga vot eti reb9ta \n");
-        printf("10)O________________o... \n");
+        printf("a)By name\n");
+        printf("b)By surname\n");
+        printf("c)By nickname\n");
+        printf("d)I'm not shy!!!\n");
+        printf("e)Tut bil Gero\n");
+        printf("f)Choose me to see something cool =)\n");
+        printf("j)Tut bil Gero opiat\n");
+        printf("h)Sandwich makes me so strong!\n");
+        printf("i)Aga vot eti reb9ta \n");
+        printf("j)O________________o... \n");
         do{
-            c=getch();
-        }while(c<'1'||c>'8');
+            c=getchar();
+        }while(c<'1'||c>'10');
 
         printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);
 
         switch(c){
-            case '1':
+            case 'a':
                 printf("Enter your name:");
                 fgets(namebuffer, LINELENGTH, stdin);
                 namebuffer[strlen(namebuffer)-1]='\0';
                 break;
-            case '2':
+            case 'b':
                 printf("Enter your surname:");
                 fgets(surnamebuffer, LINELENGTH, stdin);
                 surnamebuffer[strlen(surnamebuffer)-1]='\0';
                 break;
-            case '3':
+            case 'c':
                 printf("Enter your nickname:");
                 fgets(nicknamebuffer, LINELENGTH, stdin);
                 nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
                 break;
-            case '4':
+            case 'd':
 
                 printf("Enter your name:");
                 fgets(namebuffer, LINELENGTH, stdin);
@@ -62,21 +62,30 @@ int main()
                 nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
 
                 break;
-            case '5':
+            case 'e':
                 printf("This means, that Gero now understands Git!!!\n");
                 break;
-            case '6':
+            case 'f':
                 printf("You've got FROWNED!!!\n");
                 getch();
                 printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
                 break;
-            case '8':
+            case 'h':
                 printf("To tell the truth, cake makes me much more strong...");
                 getch();
                 printf("but cake is a lie!\n");
                 break;
-            case '9':
+
+            case 'i':
                 printf("Какие нах ребята?!\n");
+                break;
+
+            case 'j':
+                printf("I'm very sad!\n");
+                printf("I'm very very sad!\n");
+                printf("I'm very very very sad!\n");
+                printf("I'm very very vey very sad!\n");
+                printf("I'm very very vey very sad!-_- +1\n ");
                 break;
 
         }
@@ -93,13 +102,13 @@ int main()
 
         if(strcmp(nicknamebuffer, "TReaper")==0){
             printf("Welcome, Master TReaper!\n");
-        }else if(c=='1'){
+        }else if(c=='a'){
             printf("So, you've entered only your name... You are %s, right?\n", namebuffer);
-        }else if(c=='2'){
+        }else if(c=='b'){
             printf("So, your surname is %s\n", surnamebuffer);
-        }else if(c=='3'){
+        }else if(c=='c'){
             printf("So, you've entered only your nickname, which is %s\n", nicknamebuffer);
-        }else if(c=='4'){
+        }else if(c=='d'){
             printf("Oh, %s is not a shy person - now we know that %s's surname is %s and %s's nickname is %s! Thank you very much!!!\n", namebuffer, namebuffer, surnamebuffer, namebuffer, nicknamebuffer);
         }
 

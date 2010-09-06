@@ -14,9 +14,9 @@ int main()
 
     while(c!='@'){
 
-        namebuffer[LINELENGTH]='';
-        surnamebuffer[LINELENGTH]='';
-        nicknamebuffer[LINELENGTH]='';
+        namebuffer[0]='\0';
+        surnamebuffer[0]='\0';
+        nicknamebuffer[0]='\0';
 
         printf("How do you want to introduce yourself?:\n");
         printf("a)By name\n");
@@ -32,7 +32,7 @@ int main()
         do{
             c=getchar();
             getchar();
-        }while(c<'1'||c>'10');
+        }while(c<'a'||c>'j');
 
         printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);
 
@@ -96,6 +96,7 @@ int main()
         }
 
         printf("-------------------\n");
+        //printf("name=%s\nsurname=%s\nnickname=%s\n\n", namebuffer, surnamebuffer, nicknamebuffer[LINELENGTH]);
 
         //printf("name=%d\nsurname=%d\nnickname=%d\n", strlen(namebuffer), strlen(surnamebuffer), strlen(nicknamebuffer));
 /*

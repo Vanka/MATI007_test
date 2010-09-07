@@ -30,6 +30,7 @@ int main()
         printf("i)Aga vot eti reb9ta \n");
         printf("j)O________________o... \n");
         printf("g)Some eggs?\n");
+        printf("k)Some sandviches?????\n");
         do{
             c=getchar();
             getchar();

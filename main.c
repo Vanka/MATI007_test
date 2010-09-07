@@ -11,8 +11,10 @@ int main()
     char nicknamebuffer[LINELENGTH];
 
     int c;
+    int b=0,i;
 
-    while(c!='@'){
+    while(c!='@')
+    {
 
         namebuffer[0]='\0';
         surnamebuffer[0]='\0';
@@ -30,69 +32,72 @@ int main()
         printf("i)Aga vot eti reb9ta \n");
         printf("j)O________________o... \n");
         printf("g)Some eggs?\n");
-        do{
+        do
+        {
             c=getchar();
             getchar();
-        }while(c<'a'||c>'j');
+        }
+        while(c<'a'||c>'j');
 
         printf("Remember:you can't enter more then %d symbols per field!\n-------------------\n", LINELENGTH-1);
 
-        switch(c){
-            case 'a':
-                printf("Enter your name:");
-                fgets(namebuffer, LINELENGTH, stdin);
-                namebuffer[strlen(namebuffer)-1]='\0';
-                break;
-            case 'b':
-                printf("Enter your surname:");
-                fgets(surnamebuffer, LINELENGTH, stdin);
-                surnamebuffer[strlen(surnamebuffer)-1]='\0';
-                break;
-            case 'c':
-                printf("Enter your nickname:");
-                fgets(nicknamebuffer, LINELENGTH, stdin);
-                nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
-                break;
-            case 'd':
+        switch(c)
+        {
+        case 'a':
+            printf("Enter your name:");
+            fgets(namebuffer, LINELENGTH, stdin);
+            namebuffer[strlen(namebuffer)-1]='\0';
+            break;
+        case 'b':
+            printf("Enter your surname:");
+            fgets(surnamebuffer, LINELENGTH, stdin);
+            surnamebuffer[strlen(surnamebuffer)-1]='\0';
+            break;
+        case 'c':
+            printf("Enter your nickname:");
+            fgets(nicknamebuffer, LINELENGTH, stdin);
+            nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
+            break;
+        case 'd':
 
-                printf("Enter your name:");
-                fgets(namebuffer, LINELENGTH, stdin);
-                namebuffer[strlen(namebuffer)-1]='\0';
+            printf("Enter your name:");
+            fgets(namebuffer, LINELENGTH, stdin);
+            namebuffer[strlen(namebuffer)-1]='\0';
 
-                printf("Enter your surname:");
-                fgets(surnamebuffer, LINELENGTH, stdin);
-                surnamebuffer[strlen(surnamebuffer)-1]='\0';
+            printf("Enter your surname:");
+            fgets(surnamebuffer, LINELENGTH, stdin);
+            surnamebuffer[strlen(surnamebuffer)-1]='\0';
 
-                printf("Enter your nickname:");
-                fgets(nicknamebuffer, LINELENGTH, stdin);
-                nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
+            printf("Enter your nickname:");
+            fgets(nicknamebuffer, LINELENGTH, stdin);
+            nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
 
-                break;
-            case 'e':
-                printf("This means, that Gero now understands Git!!!\n");
-                break;
-            case 'f':
-                printf("You've got FROWNED!!!\n");
-                getch();
-                printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
-                break;
-            case 'h':
-                printf("To tell the truth, cake makes me much stronger...");
-                getch();
-                printf("but cake is a lie!\n");
-                break;
+            break;
+        case 'e':
+            printf("This means, that Gero now understands Git!!!\n");
+            break;
+        case 'f':
+            printf("You've got FROWNED!!!\n");
+            getch();
+            printf("No, seriously, You've got FROWNED!1!!!1!!!1111\n");
+            break;
+        case 'h':
+            printf("To tell the truth, cake makes me much stronger...");
+            getch();
+            printf("but cake is a lie!\n");
+            break;
 
-            case 'i':
-                printf("Какие нах ребята?!\n");
-                break;
+        case 'i':
+            printf("Какие нах ребята?!\n");
+            break;
 
-            case 'j':
-                printf("I'm very sad!\n");
-                printf("I'm very very sad!\n");
-                printf("I'm very very very sad!\n");
-                printf("I'm very very vey very sad!\n");
-                printf("I'm very very vey very sad!-_- +1\n ");
-                break;
+        case 'j':
+            printf("I'm very sad!\n");
+            printf("I'm very very sad!\n");
+            printf("I'm very very very sad!\n");
+            printf("I'm very very vey very sad!\n");
+            printf("I'm very very vey very sad!-_- +1\n ");
+            break;
 
         }
 
@@ -100,72 +105,85 @@ int main()
         //printf("name=%s\nsurname=%s\nnickname=%s\n\n", namebuffer, surnamebuffer, nicknamebuffer[LINELENGTH]);
 
         //printf("name=%d\nsurname=%d\nnickname=%d\n", strlen(namebuffer), strlen(surnamebuffer), strlen(nicknamebuffer));
-/*
-        namebuffer[strlen(namebuffer)-1]='\0';
-        surnamebuffer[strlen(surnamebuffer)-1]='\0';
-        nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
-  */
+        /*
+                namebuffer[strlen(namebuffer)-1]='\0';
+                surnamebuffer[strlen(surnamebuffer)-1]='\0';
+                nicknamebuffer[strlen(nicknamebuffer)-1]='\0';
+          */
 
 
-        if(strcmp(nicknamebuffer, "TReaper")==0){
+        if(strcmp(nicknamebuffer, "TReaper")==0)
+        {
             printf("Welcome, Master TReaper!\n");
-        }else if(c=='a'){
+        }
+        else if(c=='a')
+        {
             printf("So, you've entered only your name... You are %s, right?\n", namebuffer);
-        }else if(c=='b'){
+        }
+        else if(c=='b')
+        {
             printf("So, your surname is %s\n", surnamebuffer);
-        }else if(c=='c'){
+        }
+        else if(c=='c')
+        {
             printf("So, you've entered only your nickname, which is %s\n", nicknamebuffer);
-        }else if(c=='d'){
+        }
+        else if(c=='d')
+        {
             printf("Oh, %s is not a shy person - now we know that %s's surname is %s and %s's nickname is %s! Thank you very much!!!\n", namebuffer, namebuffer, surnamebuffer, namebuffer, nicknamebuffer);
-        }else if(c=='g')
-            printf("\n\
-            _____________________________________________________________\n\
-            ________________________$$$$$$$$$$$$_________________________\n\
-            _________________$$$$$$$$$$$$$$$$$$$$$$$$____________________\n\
-            ________________$$$$$$$$$$$$$$$$$$$$$$$$$$$$_________________\n\
-            ____________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$_____________\n\
-            _________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$____________\n\
-            _________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$$$$$$$____________\n\
-            ________$$$$$$$$$$$$$$$$$$$$$$$$####$$$$$$$$$$$$$$$$_________\n\
-            _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$________\n\
-            _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$______\n\
-            ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#########$$$$$$_____\n\
-            ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$################$$$#$____\n\
-            _$$$$$$$$####$$$$$$$$$$$$$$$$$$##################$$$$$$$$____\n\
-            _$$$$$$$$$$$$$$$$$$$$$$$$$$$$############$$$$$$$$$$$$$$$$____\n\
-            _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$____\n\
-            $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            $$$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            $$$$########$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            $$$$#################$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            #$$$$################$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$###$$___\n\
-            #$$$$$$######################$$$$$$$$$$$$$$$$$$$$####$$$$$___\n\
-            #$$$$$$$$$$$#####################################$$$$$$$$$___\n\
-            #$$$$$$$$$$$$$$$$$$$$###################$$$$$$$$$$$$$$$$$$___\n\
-            #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
-            #$$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$#___\n\
-            $$$$########$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#######$___\n\
-            _$$$$################$$$$$$$$$$$$$$$$$$$$############$$$#$___\n\
-            _$$$$$$$#############################################$$$#$___\n\
-            _$$$$$$$$$$$############################################$____\n\
-            ____$$$$$$$$$$$$$$$$$#############################$$$###$____\n\
-            ____$$$#$$$$$$$$$$$$$$$$$$$$$############$$$$$$$$$$$$$$$_____\n\
-            _____$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$______\n\
-            _____$$$$$$$####$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$###$________\n\
-            ________$$##############$$$$$$$$$$$$$$$$$$$$#$$$#$$$_________\n\
-            _________$##################################$$$$#$___________\n\
-            _________$$$$########################$$$$$$$####$____________\n\
-            ____________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##$$$$_____________\n\
-            ________________$$######$$$$$$$$$$$$$####$$$_________________\n\
-            _________________$$$$$$$$###########$$$$$____________________\n\
-            _____________________________________________________________\n\
-            _____________________________________________________________\n\
-            \n\
-        \n");
-        printf("\n\nEnter @ to exit or something else to try again lol\n");
+        }
+        else if(c=='g')
+        printf("How much eggs do you want?\n");
+        scanf("%d", &b);
+        for(i=1;i<=b;i++){
+                printf("\n\
+                _____________________________________________________________\n\
+                ________________________$$$$$$$$$$$$_________________________\n\
+                _________________$$$$$$$$$$$$$$$$$$$$$$$$____________________\n\
+                ________________$$$$$$$$$$$$$$$$$$$$$$$$$$$$_________________\n\
+                ____________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$_____________\n\
+                _________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$____________\n\
+                _________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$$$$$$$____________\n\
+                ________$$$$$$$$$$$$$$$$$$$$$$$$####$$$$$$$$$$$$$$$$_________\n\
+                _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$________\n\
+                _____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$______\n\
+                ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#########$$$$$$_____\n\
+                ____$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$################$$$#$____\n\
+                _$$$$$$$$####$$$$$$$$$$$$$$$$$$##################$$$$$$$$____\n\
+                _$$$$$$$$$$$$$$$$$$$$$$$$$$$$############$$$$$$$$$$$$$$$$____\n\
+                _$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$____\n\
+                $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                $$$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                $$$$########$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                $$$$#################$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                #$$$$################$$$$$$$$    $$$$$$$$$$$$$$$$$$$$$$$##___\n\
+                #$$$$$$######################  %d $$$$$$$$$$$$$$$$$$$######___\n\
+                #$$$$$$$$$$$#################    ###################$$$$$$___\n\
+                #$$$$$$$$$$$$$$$$$$$$###################$$$$$$$$$$$$$$$$$$___\n\
+                #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$___\n\
+                #$$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$#___\n\
+                $$$$########$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#######$___\n\
+                _$$$$################$$$$$$$$$$$$$$$$$$$$############$$$#$___\n\
+                _$$$$$$$#############################################$$$#$___\n\
+                _$$$$$$$$$$$############################################$____\n\
+                ____$$$$$$$$$$$$$$$$$#############################$$$###$____\n\
+                ____$$$#$$$$$$$$$$$$$$$$$$$$$############$$$$$$$$$$$$$$$_____\n\
+                _____$$#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#$$______\n\
+                _____$$$$$$$####$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$###$________\n\
+                ________$$##############$$$$$$$$$$$$$$$$$$$$#$$$#$$$_________\n\
+                _________$##################################$$$$#$___________\n\
+                _________$$$$########################$$$$$$$####$____________\n\
+                ____________$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$##$$$$_____________\n\
+                ________________$$######$$$$$$$$$$$$$####$$$_________________\n\
+                _________________$$$$$$$$###########$$$$$____________________\n\
+                _____________________________________________________________\n\
+                _____________________________________________________________\n\
+                \n\
+                \n",i);
+        }printf("\n\nEnter @ to exit or something else to try again lol\n");
         c=getch();
-    }
-    return 0;
+}
+return 0;
 }
